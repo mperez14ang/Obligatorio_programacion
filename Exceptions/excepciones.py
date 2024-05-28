@@ -1,3 +1,4 @@
+
 class EspecialidadError(Exception):
     pass
 
