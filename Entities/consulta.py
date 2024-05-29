@@ -16,12 +16,12 @@ class Consulta:
         self.max_pacientes = max_pacientes
         self.pacientes = []
 
-        def agregar_paciente(self, paciente: str, numero: int):
-            if len(self.pacientes) < self.max_pacientes and numero <= self.max_pacientes:
-                self.pacientes.insert(numero -1 , paciente)
-            else:
-                raise ConsultaError("No se puede agregar más pacientes a la consulta. o numero invalido")
+    def agregar_paciente(self, paciente: str, numero: int):
+        if len(self.pacientes) < self.max_pacientes and numero <= self.max_pacientes:
+            self.pacientes.insert(numero -1 , paciente)
+        else:
+            raise ConsultaError("No se puede agregar más pacientes a la consulta. o numero invalido")
         
-        def __str__(self) -> str:
-            return f"Consulta de {self.especialidad} con {self.medico} el {self.fecha}, Maximo pacientes: {self.max_pacientes}"
+    def __str__(self) -> str:
+        return f"Consulta de {self.especialidad} con {self.medico} el {self.fecha}, Maximo pacientes: {self.max_pacientes}"
         
